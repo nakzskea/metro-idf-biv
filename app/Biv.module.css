@@ -1,0 +1,83 @@
+.biv {
+  background: #2b1424;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 6px 20px #0004;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #e8edf2;
+  color: #1f1a24;
+  padding: 12px 16px;
+  border-bottom: 6px solid var(--line);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.metro {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.tram {
+  flex: none;
+  border-block: 4px solid;
+  padding: 2px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px 0 16px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.col + .col {
+  border-left: 2px solid #fff8;
+}
+
+.label {
+  font-size: 18px;
+}
+
+.big {
+  color: #e3cc2b;
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.big small {
+  font-size: 20px;
+  letter-spacing: 0;
+  margin-left: 2px;
+}
+
+.quai {
+  color: #e3cc2b;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 26px;
+}
