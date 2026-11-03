@@ -121,7 +121,7 @@ async function Favorites({ lines, favs }: { lines: Line[]; favs: string[] }) {
           <Link href={href(s.line, s.stop)} style={{ color: "#1f1a24", fontWeight: 600, fontSize: 18 }}>
             {label(s.line)} · {s.stop.name}
           </Link>
-          {s.boards.map((p) => <Biv key={p.direction} p={p} />)}
+          <div style={grid}>{s.boards.map((p) => <Biv key={p.direction} p={p} />)}</div>
         </section>
       ),
   );
@@ -138,6 +138,12 @@ const btn = {
   background: "#2b1424",
   color: "#e3cc2b",
   textDecoration: "none",
+} as const;
+
+const grid = {
+  display: "grid",
+  gap: 16,
+  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 420px), 1fr))",
 } as const;
 
 async function Content({ searchParams }: { searchParams: Params }) {
@@ -174,7 +180,7 @@ async function Content({ searchParams }: { searchParams: Params }) {
               </form>
             )}
           </div>
-          {boards.map((p) => <Biv key={p.direction} p={p} />)}
+          <div style={grid}>{boards.map((p) => <Biv key={p.direction} p={p} />)}</div>
           {current && boards.length === 0 && <p>Aucun passage annoncé.</p>}
         </>
       ) : (
