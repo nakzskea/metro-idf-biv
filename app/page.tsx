@@ -4,9 +4,9 @@ import Link from "next/link";
 import { cookies } from "next/headers";
 import { cacheLife } from "next/cache";
 import { Fira_Sans } from "next/font/google";
-import Biv, { type Passage } from "./Biv";
-import Refresh from "./Refresh";
-import AutoSelect from "./AutoSelect";
+import Biv, { type Passage } from "../components/Biv";
+import Refresh from "../components/Refresh";
+import AutoSelect from "@/components/AutoSelect";
 import { connection } from "next/server";
 
 const fira = Fira_Sans({ subsets: ["latin"], weight: ["500", "600"] });
