@@ -157,7 +157,7 @@ async function Content({ searchParams }: { searchParams: Params }) {
 
   return (
     <>
-      <Form action="/" style={{ display: "grid", gap: 8 }}>
+      <Form action="/" style={{ display: "grid", gap: 8, maxWidth: 560 }}>
         <AutoSelect key={line?.id ?? "none"} name="line" defaultValue={line?.id ?? ""}>
           <option value="" disabled>Choisir une ligne</option>
           {lines.map((l) => <option key={l.id} value={l.id}>{label(l)}</option>)}
