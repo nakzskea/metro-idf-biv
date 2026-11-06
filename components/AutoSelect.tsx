@@ -7,7 +7,7 @@ export default function AutoSelect(props: ComponentProps<"select">) {
     <select
       {...props}
       onChange={(e) => e.currentTarget.form?.requestSubmit()}
-      style={{ font: "inherit", fontSize: 18, padding: 10, borderRadius: 10, border: "1px solid #aab" }}
+      style={{ font: "inherit", fontSize: 18, padding: 10, borderRadius: 10, border: "1px solid #aab", color: "#1f1a24", background: "#fff" }}
     />
   );
 }
